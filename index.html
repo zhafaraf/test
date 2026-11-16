@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zahfar Aziz Ferdian — Data & Operations Analyst | ML & Big Data Optimization</title>
+  <meta name="description" content="Portofolio interaktif Zahfar Aziz Ferdian — Lulusan S1 Informatika UTY (IPK 3,46), Data & Operations Analyst, serta Peneliti Machine Learning & Big Data Optimization (Publikasi Sinta 3)." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              emerald: '#10b981',
+              teal: '#14b8a6',
+              cyan: '#06b6d4',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Minimal Custom Styles for Grid Background, Scrollbar & Reveal Animations -->
+  <style>
+    /* Subtle technical dot/grid background */
+    .bg-tech-grid {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(20, 184, 166, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(20, 184, 166, 0.06) 1px, transparent 1px);
+    }
+    html:not(.dark) .bg-tech-grid {
+      background-image: 
+        linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+    }
+
+    /* Smooth scroll-reveal animation */
+    .reveal-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(20, 184, 166, 0.35);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(20, 184, 166, 0.6);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased selection:bg-teal-500/30 selection:text-teal-300 transition-colors duration-300 overflow-x-hidden">
+
+  <!-- Ambient Background Glows -->
+  <div class="fixed inset-0 bg-tech-grid pointer-events-none z-0"></div>
+  <div class="fixed -top-40 -left-40 w-96 h-96 bg-emerald-500/10 dark:bg-emerald-500/15 rounded-full blur-3xl pointer-events-none z-0"></div>
+  <div class="fixed top-1/3 -right-40 w-96 h-96 bg-cyan-500/10 dark:bg-cyan-500/15 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+  <!-- =========================================================
+       1. STICKY GLASSMORPHISM NAVBAR
+       ========================================================= -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-xl bg-white/80 dark:bg-slate-950/80 border-b border-slate-200/80 dark:border-slate-800/80 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-18">
+        
+        <!-- Logo Monogram & Brand Name -->
+        <a href="#tentang" class="flex items-center gap-3 group focus:outline-none">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 p-[1.5px] shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform">
+            <div class="w-full h-full rounded-[10px] bg-white dark:bg-slate-950 flex items-center justify-center">
+              <span class="font-mono font-bold text-base bg-gradient-to-r from-emerald-500 to-cyan-500 bg-clip-text text-transparent">ZF.</span>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-sm sm:text-base tracking-tight text-slate-900 dark:text-white leading-tight">Zahfar Aziz Ferdian</span>
+            <span class="font-mono text-[11px] text-teal-600 dark:text-teal-400 hidden sm:inline">Data &amp; AI Systems</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav aria-label="Navigasi Utama" class="hidden lg:flex items-center gap-1">
+          <a href="#tentang" data-i18n="nav_about" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100/80 dark:hover:bg-slate-800/60 transition-colors">Tentang</a>
+          <a href="#simulasi" data-i18n="nav_sim" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100/80 dark:hover:bg-slate-800/60 transition-colors">Simulasi Riset</a>
+          <a href="#proyek" data-i18n="nav_projects" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100/80 dark:hover:bg-slate-800/60 transition-colors">Proyek</a>
+          <a href="#keahlian" data-i18n="nav_skills" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100/80 dark:hover:bg-slate-800/60 transition-colors">Keahlian</a>
+          <a href="#pengalaman" data-i18n="nav_exp" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100/80 dark:hover:bg-slate-800/60 transition-colors">Pengalaman</a>
+          <a href="#sertifikasi" data-i18n="nav_cert" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100/80 dark:hover:bg-slate-800/60 transition-colors">Sertifikasi</a>
+          <a href="#kontak" data-i18n="nav_contact" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100/80 dark:hover:bg-slate-800/60 transition-colors">Kontak</a>
+        </nav>
+
+        <!-- Controls: Language Toggle, Theme Toggle, Mobile Menu Button -->
+        <div class="flex items-center gap-2">
+          <!-- Language Toggle (ID / EN) -->
+          <button id="langToggle" type="button" aria-label="Ganti Bahasa" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-mono font-semibold border border-slate-200 dark:border-slate-700/80 bg-slate-100/80 dark:bg-slate-900/90 text-slate-700 dark:text-slate-200 hover:border-teal-500/60 transition-all">
+            <svg class="w-3.5 h-3.5 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+            <span id="langLabel">ID</span>
+          </button>
+
+          <!-- Theme Toggle (Dark / Light) -->
+          <button id="themeToggle" type="button" aria-label="Ganti Tema Tampilan" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700/80 bg-slate-100/80 dark:bg-slate-900/90 text-slate-700 dark:text-slate-200 hover:border-teal-500/60 transition-all">
+            <!-- Sun Icon (shown in dark mode) -->
+            <svg id="iconSun" class="w-4 h-4 text-amber-400 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <!-- Moon Icon (shown in light mode) -->
+            <svg id="iconMoon" class="w-4 h-4 text-slate-700 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button id="mobileMenuBtn" type="button" aria-label="Buka Menu Navigasi" class="lg:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-700/80 bg-slate-100/80 dark:bg-slate-900/90 text-slate-700 dark:text-slate-200 hover:border-teal-500/60 transition-all">
+            <svg id="menuIconOpen" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menuIconClose" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <nav id="mobileMenu" aria-label="Navigasi Mobile" class="hidden lg:hidden pb-4 pt-2 border-t border-slate-200/70 dark:border-slate-800/70 space-y-1">
+        <a href="#tentang" data-i18n="nav_about" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-teal-500/10 hover:text-teal-500">Tentang</a>
+        <a href="#simulasi" data-i18n="nav_sim" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-teal-500/10 hover:text-teal-500">Simulasi Riset</a>
+        <a href="#proyek" data-i18n="nav_projects" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-teal-500/10 hover:text-teal-500">Proyek</a>
+        <a href="#keahlian" data-i18n="nav_skills" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-teal-500/10 hover:text-teal-500">Keahlian</a>
+        <a href="#pengalaman" data-i18n="nav_exp" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-teal-500/10 hover:text-teal-500">Pengalaman</a>
+        <a href="#sertifikasi" data-i18n="nav_cert" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-teal-500/10 hover:text-teal-500">Sertifikasi</a>
+        <a href="#kontak" data-i18n="nav_contact" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-teal-500/10 hover:text-teal-500">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+
+    <!-- =========================================================
+         2. HERO SECTION & RINGKASAN METRIK UTAMA
+         ========================================================= -->
+    <section id="tentang" class="pt-12 pb-16 sm:pt-20 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Left Column: Profile Headline, Summary & Actions -->
+        <div class="lg:col-span-7 space-y-6">
+          <!-- Status Badge -->
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-xs sm:text-sm font-medium">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span data-i18n="hero_badge">Tersedia untuk Peluang Kerja &amp; Kolaborasi</span>
+          </div>
+
+          <!-- Name & Role -->
+          <div class="space-y-3">
+            <p class="font-mono text-xs sm:text-sm uppercase tracking-wider text-teal-600 dark:text-teal-400 font-semibold">
+              Data &amp; Operations Analyst | Machine Learning &amp; Big Data Optimization
+            </p>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
+              Zahfar Aziz Ferdian
+            </h1>
+          </div>
+
+          <!-- Professional Summary -->
+          <p data-i18n="hero_summary" class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl text-justify">
+            Lulusan S1 Informatika Universitas Teknologi Yogyakarta (IPK 3,46) dengan kombinasi pengalaman kerja praktis 18 bulan di bidang analisis data operasional logistik dan riset terapan Machine Learning. Berpengalaman mengelola data lalu lintas ribuan paket, audit <em>stock opname</em>, serta visualisasi performa harian berbasis Excel tingkat lanjut di Logistic Lazada. Berfokus pada pengolahan Big Data, Computer Vision, dan optimasi efisiensi komputasi model klasifikasi yang telah terpublikasi di jurnal ilmiah terakreditasi Sinta 3 (JAIC).
+          </p>
+
+          <!-- Primary CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="#proyek" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-sm shadow-lg shadow-teal-500/25 transition-all hover:-translate-y-0.5">
+              <span data-i18n="btn_explore_projects">Jelajahi Proyek</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+
+            <a href="https://jurnal.polibatam.ac.id/index.php/JAIC/article/view/11675" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 hover:border-cyan-500 dark:hover:border-cyan-400 text-slate-800 dark:text-slate-100 font-semibold text-sm transition-all hover:-translate-y-0.5">
+              <svg class="w-4 h-4 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              <span data-i18n="btn_sinta">Lihat Publikasi Sinta 3</span>
+            </a>
+
+            <button type="button" onclick="copyEmailAddress()" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 hover:border-teal-500/60 text-slate-700 dark:text-slate-200 font-mono text-xs sm:text-sm font-medium transition-all">
+              <svg class="w-4 h-4 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              <span data-i18n="btn_copy_email">Salin Email</span>
+            </button>
+          </div>
+
+          <!-- Location & Quick Meta -->
+          <div class="flex flex-wrap items-center gap-x-6 gap-y-2 pt-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-mono">
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Puri Rajawali Lojajar, Jalan Kapten Haryadi Gang Tb Langgengjaya No. 3, Lojajar NGAGLIK, KAB. SLEMAN, DI YOGYAKARTA, ID 55581
+            </span>
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              zahfaraf14@gmail.com
+            </span>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual System Architecture Card + 4 KPI Highlight Cards -->
+        <div class="lg:col-span-5 space-y-4">
+          <!-- Profile Photo -->
+          <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-lg shadow-slate-950/5 dark:shadow-black/30">
+            <img src="foto-profil.png" alt="Foto profil Zahfar Aziz Ferdian" class="w-24 h-28 sm:w-28 sm:h-32 object-cover object-top rounded-xl border border-slate-200 dark:border-slate-700 shadow-md" decoding="async" />
+            <div>
+              <p class="font-mono text-xs font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">Profil Profesional</p>
+              <p class="mt-2 text-lg font-bold text-slate-900 dark:text-white">Zahfar Aziz Ferdian</p>
+              <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Data &amp; Operations Analyst</p>
+            </div>
+          </div>
+
+          <!-- System Architecture Telemetry Header Card -->
+          <div class="p-5 rounded-2xl bg-white/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-950/5 dark:shadow-black/30 backdrop-blur-md">
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200/80 dark:border-slate-800">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                <span class="ml-2 font-mono text-xs text-slate-500 dark:text-slate-400">profile_telemetry.py</span>
+              </div>
+              <span class="px-2 py-0.5 rounded-md bg-teal-500/10 text-teal-600 dark:text-teal-400 font-mono text-[11px] font-semibold">VERIFIED</span>
+            </div>
+
+            <!-- 2x2 Grid of 4 KPI Highlight Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <!-- KPI 1 -->
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200/80 dark:border-slate-800/90 hover:border-emerald-500/50 transition-colors">
+                <div class="font-mono text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-emerald-500 to-teal-400 bg-clip-text text-transparent" data-i18n="kpi1_val">18 Bulan</div>
+                <p class="mt-1.5 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 leading-snug" data-i18n="kpi1_desc">
+                  Pengalaman Operasional &amp; Data Logistik (Lazada)
+                </p>
+              </div>
+
+              <!-- KPI 2 -->
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200/80 dark:border-slate-800/90 hover:border-cyan-500/50 transition-colors">
+                <div class="font-mono text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">99,6%</div>
+                <p class="mt-1.5 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 leading-snug" data-i18n="kpi2_desc">
+                  Efisiensi Waktu Pelatihan SVM via PCA/IPCA
+                </p>
+              </div>
+
+              <!-- KPI 3 -->
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200/80 dark:border-slate-800/90 hover:border-emerald-500/50 transition-colors">
+                <div class="font-mono text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Sinta 3</div>
+                <p class="mt-1.5 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 leading-snug" data-i18n="kpi3_desc">
+                  Publikasi Jurnal Ilmiah JAIC (Penulis Pertama)
+                </p>
+              </div>
+
+              <!-- KPI 4 -->
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200/80 dark:border-slate-800/90 hover:border-teal-500/50 transition-colors">
+                <div class="font-mono text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">3,46 / 4,00</div>
+                <p class="mt-1.5 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 leading-snug" data-i18n="kpi4_desc">
+                  IPK S1 Informatika UTY (Sistem Cerdas)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. INTERACTIVE WIDGET: SIMULATOR & BENCHMARK PCA VS IPCA
+         ========================================================= -->
+    <section id="simulasi" class="reveal-section py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="rounded-3xl bg-white/90 dark:bg-slate-900/85 border border-slate-200 dark:border-slate-800 p-6 sm:p-10 shadow-2xl shadow-slate-950/5 dark:shadow-black/40 backdrop-blur-md">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-8 border-b border-slate-200 dark:border-slate-800">
+          <div class="space-y-2 max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/25 text-cyan-600 dark:text-cyan-400 font-mono text-xs font-semibold">
+              <span>BENCHMARK ENGINE // DATASET CITRA 209 MB</span>
+            </div>
+            <h2 data-i18n="sim_title" class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+              Simulator &amp; Benchmark Optimasi Komputasi Big Data (PCA vs IPCA)
+            </h2>
+            <p data-i18n="sim_subtitle" class="text-sm sm:text-base text-slate-600 dark:text-slate-300">
+              Eksplorasi hasil pengujian empiris Tugas Akhir S1 Informatika pada dataset citra digital berukuran <strong>209 MB</strong>. Pilih skenario algoritma di bawah untuk membandingkan waktu pelatihan, konsumsi RAM, dan stabilitas akurasi.
+            </p>
+          </div>
+          <div class="font-mono text-xs text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-950 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800">
+            Target Classifier: <span class="text-teal-600 dark:text-teal-400 font-semibold">SVM (Support Vector Machine)</span>
+          </div>
+        </div>
+
+        <!-- Mode Selector Buttons -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 my-8" role="tablist" aria-label="Pilihan Skenario Algoritma">
+          <button type="button" onclick="selectSimMode('baseline')" id="simBtn-baseline" class="sim-mode-btn text-left p-4 rounded-2xl border transition-all focus:outline-none">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider text-rose-500">Mode 01 // Raw</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+            </div>
+            <div data-i18n="sim_m1_title" class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Baseline SVM (Tanpa Reduksi Dimensi)</div>
+            <p data-i18n="sim_m1_short" class="text-xs text-slate-500 dark:text-slate-400 mt-1">Pemrosesan matriks fitur mentah 100% secara penuh</p>
+          </button>
+
+          <button type="button" onclick="selectSimMode('pca')" id="simBtn-pca" class="sim-mode-btn text-left p-4 rounded-2xl border transition-all focus:outline-none">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider text-cyan-500">Mode 02 // Standard</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-cyan-500"></span>
+            </div>
+            <div data-i18n="sim_m2_title" class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">SVM + PCA Standar</div>
+            <p data-i18n="sim_m2_short" class="text-xs text-slate-500 dark:text-slate-400 mt-1">Reduksi dimensi tunggal dalam satu alokasi memori</p>
+          </button>
+
+          <button type="button" onclick="selectSimMode('ipca')" id="simBtn-ipca" class="sim-mode-btn text-left p-4 rounded-2xl border transition-all focus:outline-none">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider text-emerald-500">Mode 03 // Recommended</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            </div>
+            <div data-i18n="sim_m3_title" class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">SVM + Incremental PCA (IPCA)</div>
+            <p data-i18n="sim_m3_short" class="text-xs text-slate-500 dark:text-slate-400 mt-1">Batch Processing bertahap untuk Big Data &gt;200 MB</p>
+          </button>
+        </div>
+
+        <!-- Benchmark Visualization & Technical Architecture Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left 7 Cols: Animated Metrics & Progress Bars -->
+          <div class="lg:col-span-7 space-y-6 p-6 rounded-2xl bg-slate-50 dark:bg-slate-950/90 border border-slate-200 dark:border-slate-800">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 id="simActiveHeading" class="font-bold text-lg text-slate-900 dark:text-white">SVM + Incremental PCA (IPCA - Batch Processing)</h3>
+              <span id="simStatusBadge" class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                Bebas Memory Error (&gt;200 MB)
+              </span>
+            </div>
+
+            <!-- Metric Bar 1: Training Time -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-baseline text-sm">
+                <span data-i18n="sim_label_time" class="font-medium text-slate-600 dark:text-slate-300">Waktu Pelatihan (Training Time)</span>
+                <span id="simValTime" class="font-mono font-bold text-base text-emerald-500">6,00 detik</span>
+              </div>
+              <div class="w-full h-3.5 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden p-0.5">
+                <div id="simBarTime" class="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-400 transition-all duration-700 ease-out" style="width: 3%"></div>
+              </div>
+              <div class="flex justify-between font-mono text-[11px] text-slate-400">
+                <span>0 dtk (Optimal)</span>
+                <span>1.675,16 dtk (Baseline)</span>
+              </div>
+            </div>
+
+            <!-- Metric Bar 2: Memory Usage -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-baseline text-sm">
+                <span data-i18n="sim_label_mem" class="font-medium text-slate-600 dark:text-slate-300">Konsumsi Memori / RAM</span>
+                <span id="simValMem" class="font-mono font-bold text-base text-cyan-500">0,83 MB</span>
+              </div>
+              <div class="w-full h-3.5 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden p-0.5">
+                <div id="simBarMem" class="h-full rounded-full bg-gradient-to-r from-teal-400 to-cyan-400 transition-all duration-700 ease-out" style="width: 2.5%"></div>
+              </div>
+              <div class="flex justify-between font-mono text-[11px] text-slate-400">
+                <span>0 MB (Ringan)</span>
+                <span>330 MB (Puncak Baseline)</span>
+              </div>
+            </div>
+
+            <!-- Metric Bar 3: Accuracy Stability & Feature Compression -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-baseline text-sm">
+                <span data-i18n="sim_label_acc" class="font-medium text-slate-600 dark:text-slate-300">Retensi Akurasi &amp; Stabilitas Model</span>
+                <span id="simValAcc" class="font-mono font-bold text-base text-emerald-500">≥ 97,5% (Delta &lt;3% / +Noise Reduction)</span>
+              </div>
+              <div class="w-full h-3.5 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden p-0.5">
+                <div id="simBarAcc" class="h-full rounded-full bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 transition-all duration-700 ease-out" style="width: 98%"></div>
+              </div>
+            </div>
+
+            <!-- 3 Mini Readout Cards -->
+            <div class="grid grid-cols-3 gap-3 pt-2">
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                <div data-i18n="sim_card_feat" class="text-[11px] font-mono text-slate-500 dark:text-slate-400">Dimensi Fitur</div>
+                <div id="simMiniFeat" class="font-mono font-bold text-sm sm:text-base text-slate-900 dark:text-white mt-0.5">Reduksi &gt;99%</div>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                <div data-i18n="sim_card_speed" class="text-[11px] font-mono text-slate-500 dark:text-slate-400">Speedup Komputasi</div>
+                <div id="simMiniSpeed" class="font-mono font-bold text-sm sm:text-base text-emerald-500 mt-0.5">279,2x Lebih Cepat</div>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                <div data-i18n="sim_card_ram" class="text-[11px] font-mono text-slate-500 dark:text-slate-400">Hemat Memori</div>
+                <div id="simMiniRam" class="font-mono font-bold text-sm sm:text-base text-cyan-500 mt-0.5">99,75% Lebih Hemat</div>
+              </div>
+            </div>
+
+            <!-- Dynamic Technical Note -->
+            <div class="p-4 rounded-xl bg-teal-500/10 border border-teal-500/25 text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+              <span class="font-mono font-bold text-teal-600 dark:text-teal-400 mr-1.5">[CATATAN ANALISIS]:</span>
+              <span id="simNoteText">Solusi krusial bebas memory error untuk dataset &gt;200 MB. Dengan memproses data per-batch melalui partial_fit(), penggunaan RAM ditekan dari 330 MB menjadi hanya 0,83 MB dan penurunan akurasi terjaga di bawah 3% (bahkan meningkat pada kondisi tertentu berkat reduksi noise).</span>
+            </div>
+          </div>
+
+          <!-- Right 5 Cols: Streamlit System Architecture Blueprint -->
+          <div class="lg:col-span-5 p-6 rounded-2xl bg-slate-50 dark:bg-slate-950/90 border border-slate-200 dark:border-slate-800 space-y-4">
+            <div class="flex items-center gap-2 text-teal-600 dark:text-teal-400 font-mono text-xs font-bold uppercase tracking-wider">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+              <span data-i18n="arch_badge">Arsitektur Pipeline Streamlit</span>
+            </div>
+            <h3 data-i18n="arch_title" class="font-bold text-lg text-slate-900 dark:text-white">
+              Alur Pemrosesan Big Data &amp; Evaluasi Model
+            </h3>
+            <p data-i18n="arch_desc" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Aplikasi interaktif berbasis <strong>Python &amp; Streamlit</strong> dirancang untuk menangani input citra digital maupun dataset tabular (CSV) berkapasitas besar secara otomatis:
+            </p>
+
+            <!-- Pipeline Steps -->
+            <div class="space-y-3 pt-1">
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
+                <span class="px-2 py-1 rounded-md bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-mono text-xs font-bold">01</span>
+                <div>
+                  <div data-i18n="arch_s1_t" class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Ingestion &amp; Data Preprocessing</div>
+                  <p data-i18n="arch_s1_d" class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Normalisasi piksel citra, pembersihan fitur tabular, dan pembagian chunk/batch otomatis.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
+                <span class="px-2 py-1 rounded-md bg-teal-500/15 text-teal-600 dark:text-teal-400 font-mono text-xs font-bold">02</span>
+                <div>
+                  <div data-i18n="arch_s2_t" class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Ekstraksi Fitur PCA / Incremental PCA</div>
+                  <p data-i18n="arch_s2_d" class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Kompresi dimensi &gt;99% dengan mempertahankan komponen varians utama tanpa membebani RAM.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
+                <span class="px-2 py-1 rounded-md bg-cyan-500/15 text-cyan-600 dark:text-cyan-400 font-mono text-xs font-bold">03</span>
+                <div>
+                  <div data-i18n="arch_s3_t" class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Klasifikasi SVM / KNN &amp; Metrik Evaluasi</div>
+                  <p data-i18n="arch_s3_d" class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Audit performa real-time: Accuracy, F1-Score, MSE, PSNR, serta proyeksi visual T-SNE.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. PROYEK UNGGULAN & PUBLIKASI (FILTER + MODAL DETAIL)
+         ========================================================= -->
+    <section id="proyek" class="reveal-section py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div class="space-y-2">
+          <p class="font-mono text-xs uppercase tracking-wider text-teal-600 dark:text-teal-400 font-semibold">PORTFOLIO &amp; RESEARCH WORKS</p>
+          <h2 data-i18n="proj_title" class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Proyek Unggulan &amp; Publikasi Ilmiah
+          </h2>
+          <p data-i18n="proj_subtitle" class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl">
+            Klik kartu proyek untuk meninjau studi kasus teknis, metodologi, dan dampak terukur secara mendalam.
+          </p>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="flex flex-wrap gap-2" role="group" aria-label="Filter Kategori Proyek">
+          <button type="button" onclick="filterProjects('all')" data-filter="all" data-i18n="filter_all" class="proj-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all">Semua</button>
+          <button type="button" onclick="filterProjects('ml')" data-filter="ml" data-i18n="filter_ml" class="proj-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all">Machine Learning &amp; Big Data</button>
+          <button type="button" onclick="filterProjects('pub')" data-filter="pub" data-i18n="filter_pub" class="proj-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all">Publikasi Ilmiah</button>
+          <button type="button" onclick="filterProjects('ops')" data-filter="ops" data-i18n="filter_ops" class="proj-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all">Data &amp; Operasional</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid (Rendered Dynamically for Bilingual & Filtering Support) -->
+      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+    </section>
+
+    <!-- =========================================================
+         5. MATRIKS KEAHLIAN TEKNIS (INTERACTIVE SKILL TABS)
+         ========================================================= -->
+    <section id="keahlian" class="reveal-section py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="space-y-2 mb-8">
+        <p class="font-mono text-xs uppercase tracking-wider text-cyan-600 dark:text-cyan-400 font-semibold">TECHNICAL COMPETENCY MATRIX</p>
+        <h2 data-i18n="skill_title" class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+          Keahlian Teknis &amp; Perangkat Kerja
+        </h2>
+        <p data-i18n="skill_subtitle" class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl">
+          Kombinasi penguasaan analisis operasional berbasis spreadsheet tingkat lanjut dan rekayasa algoritma Machine Learning berbasis Python.
+        </p>
+      </div>
+
+      <!-- Interactive Tabs -->
+      <div class="flex flex-wrap gap-2.5 mb-8" role="tablist" aria-label="Kategori Keahlian Teknis">
+        <button type="button" onclick="selectSkillTab('data')" id="skillTab-data" data-i18n="tab_data" class="skill-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all">
+          Data Analysis &amp; Reporting
+        </button>
+        <button type="button" onclick="selectSkillTab('ml')" id="skillTab-ml" data-i18n="tab_ml" class="skill-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all">
+          Machine Learning &amp; AI
+        </button>
+        <button type="button" onclick="selectSkillTab('prog')" id="skillTab-prog" data-i18n="tab_prog" class="skill-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all">
+          Programming &amp; Evaluasi
+        </button>
+        <button type="button" onclick="selectSkillTab('tools')" id="skillTab-tools" data-i18n="tab_tools" class="skill-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all">
+          Tools &amp; Komunikasi
+        </button>
+      </div>
+
+      <!-- Skill Content Panel -->
+      <div id="skillPanel" class="p-6 sm:p-8 rounded-3xl bg-white/90 dark:bg-slate-900/85 border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-950/5 dark:shadow-black/30"></div>
+    </section>
+
+    <!-- =========================================================
+         6. TIMELINE PENGALAMAN KERJA, PENDIDIKAN & ORGANISASI
+         ========================================================= -->
+    <section id="pengalaman" class="reveal-section py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="space-y-2 mb-12">
+        <p class="font-mono text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">CAREER, EDUCATION &amp; LEADERSHIP</p>
+        <h2 data-i18n="exp_title" class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+          Pengalaman Kerja, Pendidikan &amp; Organisasi
+        </h2>
+      </div>
+
+      <!-- Vertical Timeline -->
+      <div class="relative border-l-2 border-teal-500/40 ml-3 sm:ml-6 space-y-10">
+        
+        <!-- Item 1: Pendidikan S1 Informatika -->
+        <div class="relative pl-8 sm:pl-10">
+          <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-slate-50 dark:bg-slate-950 border-4 border-emerald-500"></span>
+          <div class="p-6 rounded-2xl bg-white/90 dark:bg-slate-900/85 border border-slate-200 dark:border-slate-800 shadow-lg shadow-slate-950/5">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono text-xs font-bold" data-i18n="exp1_badge">PENDIDIKAN TINGGI</span>
+              <span class="font-mono text-xs sm:text-sm text-slate-500 dark:text-slate-400">2022 – 2026</span>
+            </div>
+            <h3 data-i18n="exp1_role" class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+              S1 Informatika (IPK 3,46 / 4,00)
+            </h3>
+            <p class="text-sm font-semibold text-teal-600 dark:text-teal-400 mt-0.5">
+              Universitas Teknologi Yogyakarta — Sleman, DIY
+            </p>
+            <p data-i18n="exp1_desc" class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+              Konsentrasi <strong>Sistem Cerdas</strong> dengan fokus riset pada pengolahan data skala besar (Big Data), Computer Vision, ekstraksi fitur Principal Component Analysis (PCA &amp; IPCA), serta optimasi efisiensi komputasi algoritma klasifikasi Machine Learning.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2: Kegiatan FESTIKA (Organisasi) -->
+        <div class="relative pl-8 sm:pl-10">
+          <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-slate-50 dark:bg-slate-950 border-4 border-cyan-500"></span>
+          <div class="p-6 rounded-2xl bg-white/90 dark:bg-slate-900/85 border border-slate-200 dark:border-slate-800 shadow-lg shadow-slate-950/5">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-lg bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-mono text-xs font-bold" data-i18n="exp2_badge">ORGANISASI &amp; KOORDINASI PROYEK</span>
+              <span class="font-mono text-xs sm:text-sm text-slate-500 dark:text-slate-400" data-i18n="exp2_date">April – Juni 2024</span>
+            </div>
+            <h3 data-i18n="exp2_role" class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+              Koordinator Kegiatan FESTIKA 2024
+            </h3>
+            <p class="text-sm font-semibold text-teal-600 dark:text-teal-400 mt-0.5">
+              Himpunan Mahasiswa Informatika — Universitas Teknologi Yogyakarta
+            </p>
+            <p data-i18n="exp2_desc" class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+              Berperan aktif dalam koordinasi proyek dan pelaksanaan acara teknologi bertema <em>"Merajut Dunia Digital: Membentuk Pondasi, Mengeksplorasi Kreativitas, dan Membuka Peluang Baru"</em>, memastikan kolaborasi lintas divisi dan kelancaran agenda peserta.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3: Pengalaman Kerja Logistic Lazada -->
+        <div class="relative pl-8 sm:pl-10">
+          <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-slate-50 dark:bg-slate-950 border-4 border-teal-500"></span>
+          <div class="p-6 rounded-2xl bg-white/90 dark:bg-slate-900/85 border border-slate-200 dark:border-slate-800 shadow-lg shadow-slate-950/5">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-lg bg-teal-500/10 text-teal-600 dark:text-teal-400 font-mono text-xs font-bold" data-i18n="exp3_badge">PENGALAMAN KERJA (18 BULAN)</span>
+              <span class="font-mono text-xs sm:text-sm text-slate-500 dark:text-slate-400" data-i18n="exp3_date">Maret 2021 – Agustus 2022</span>
+            </div>
+            <h3 data-i18n="exp3_role" class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+              Warehouse Staff (Operational &amp; Data Administration)
+            </h3>
+            <p class="text-sm font-semibold text-teal-600 dark:text-teal-400 mt-0.5">
+              Logistic Lazada — Cibinong, Kab. Bogor, Jawa Barat
+            </p>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside leading-relaxed">
+              <li data-i18n="exp3_b1">Mengelola dan menganalisis data lalu lintas paket (masuk/keluar) serta performa harian gudang dan kurir menggunakan fungsi tingkat lanjut Microsoft Excel (<strong>VLOOKUP, HLOOKUP, Pivot Table</strong>).</li>
+              <li data-i18n="exp3_b2">Merancang visualisasi data operasional harian guna mempermudah pemantauan dan evaluasi performa logistik oleh jajaran manajemen.</li>
+              <li data-i18n="exp3_b3">Melaksanakan manajemen inventaris audit <em>stock opname</em> dan menyusun laporan status pengiriman harian (paket terkirim, tertunda, <em>reschedule</em>, batal, dan rusak).</li>
+              <li data-i18n="exp3_b4">Menyortir, memindai (<em>scan</em>), dan memetakan distribusi ribuan paket harian kepada kurir berdasarkan zonasi wilayah untuk efisiensi rute, serta berkomunikasi proaktif dengan pelanggan terkait konfirmasi kendala pengiriman.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. SERTIFIKASI RESMI
+         ========================================================= -->
+    <section id="sertifikasi" class="reveal-section py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="space-y-2 mb-10">
+        <p class="font-mono text-xs uppercase tracking-wider text-teal-600 dark:text-teal-400 font-semibold">VERIFIED CREDENTIALS</p>
+        <h2 data-i18n="cert_title" class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+          Sertifikasi Resmi &amp; Kompetensi
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Cert 1: RapidMiner -->
+        <div class="p-6 rounded-2xl bg-white/90 dark:bg-slate-900/85 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/60 transition-all shadow-lg shadow-slate-950/5 flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-xl bg-emerald-500/15 text-emerald-500 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <h3 data-i18n="cert1_name" class="text-lg font-bold text-slate-900 dark:text-white">Machine Learning Profesional</h3>
+            <p class="text-sm font-semibold text-teal-600 dark:text-teal-400 mt-1">RapidMiner</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 dark:border-slate-800 flex items-center justify-between">
+            <span data-i18n="cert_valid" class="text-xs font-mono text-slate-500 dark:text-slate-400">Masa Berlaku</span>
+            <span data-i18n="cert1_date" class="text-xs font-mono font-semibold text-emerald-600 dark:text-emerald-400">Feb 2026 – Feb 2031</span>
+          </div>
+        </div>
+
+        <!-- Cert 2: TOEFL -->
+        <div class="p-6 rounded-2xl bg-white/90 dark:bg-slate-900/85 border border-slate-200 dark:border-slate-800 hover:border-cyan-500/60 transition-all shadow-lg shadow-slate-950/5 flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-xl bg-cyan-500/15 text-cyan-500 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+              </svg>
+            </div>
+            <h3 data-i18n="cert2_name" class="text-lg font-bold text-slate-900 dark:text-white">Sertifikasi TOEFL</h3>
+            <p class="text-sm font-semibold text-teal-600 dark:text-teal-400 mt-1">Universitas Teknologi Yogyakarta</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 dark:border-slate-800 flex items-center justify-between">
+            <span data-i18n="cert_valid" class="text-xs font-mono text-slate-500 dark:text-slate-400">Masa Berlaku</span>
+            <span data-i18n="cert2_date" class="text-xs font-mono font-semibold text-cyan-600 dark:text-cyan-400">Feb 2026 – Feb 2028</span>
+          </div>
+        </div>
+
+        <!-- Cert 3: SIAPkerja Kemnaker -->
+        <div class="p-6 rounded-2xl bg-white/90 dark:bg-slate-900/85 border border-slate-200 dark:border-slate-800 hover:border-teal-500/60 transition-all shadow-lg shadow-slate-950/5 flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-xl bg-teal-500/15 text-teal-500 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 data-i18n="cert3_name" class="text-lg font-bold text-slate-900 dark:text-white">Sertifikasi Kompetensi SIAPkerja</h3>
+            <p class="text-sm font-semibold text-teal-600 dark:text-teal-400 mt-1">Kementerian Ketenagakerjaan RI (Kemnaker)</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 dark:border-slate-800 flex items-center justify-between">
+            <span data-i18n="cert_status" class="text-xs font-mono text-slate-500 dark:text-slate-400">Status</span>
+            <span data-i18n="cert3_date" class="text-xs font-mono font-semibold text-teal-600 dark:text-teal-400">Terverifikasi Resmi</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. KONTAK & GENERATOR PESAN REKRUTER INTERAKTIF
+         ========================================================= -->
+    <section id="kontak" class="reveal-section py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-slate-800 p-6 sm:p-10 lg:p-12 text-white shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <!-- Left 5 Cols: Direct Contact Channels -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="space-y-2">
+              <span class="font-mono text-xs uppercase tracking-wider text-teal-400 font-semibold">DIRECT CONNECT</span>
+              <h2 data-i18n="contact_title" class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
+                Mari Berkolaborasi &amp; Diskusi Peluang
+              </h2>
+              <p data-i18n="contact_subtitle" class="text-sm sm:text-base text-slate-300 leading-relaxed">
+                Terbuka untuk posisi <strong>Data Analyst, Operations Analyst, Machine Learning Engineer</strong>, maupun kolaborasi riset pengolahan data.
+              </p>
+            </div>
+
+            <div class="space-y-3.5 pt-2">
+              <!-- Email Card -->
+              <div class="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/80 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5 min-w-0">
+                  <div class="w-10 h-10 rounded-xl bg-teal-500/15 text-teal-400 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div class="truncate">
+                    <div class="text-xs font-mono text-slate-400">Email</div>
+                    <div class="text-sm font-semibold text-white truncate">zahfaraf14@gmail.com</div>
+                  </div>
+                </div>
+                <button type="button" onclick="copyEmailAddress()" class="px-3 py-1.5 rounded-lg bg-slate-700 hover:bg-teal-500 hover:text-slate-950 text-xs font-mono font-semibold transition-colors shrink-0">
+                  Copy
+                </button>
+              </div>
+
+              <!-- WhatsApp / Phone Card -->
+              <a href="https://wa.me/6289682726833" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/80 hover:border-emerald-500/60 flex items-center justify-between gap-3 transition-colors group">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-xs font-mono text-slate-400">Telepon / WhatsApp</div>
+                    <div class="text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors">089682726833</div>
+                  </div>
+                </div>
+                <span class="text-xs font-mono text-emerald-400">Chat &rarr;</span>
+              </a>
+
+              <!-- Domisili Card -->
+              <div class="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/80 flex items-center gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <div data-i18n="contact_loc_label" class="text-xs font-mono text-slate-400">Domisili</div>
+                  <div class="text-sm font-semibold text-white">Puri Rajawali Lojajar, Jalan Kapten Haryadi Gang Tb Langgengjaya No. 3, Lojajar NGAGLIK, KAB. SLEMAN, DI YOGYAKARTA, ID 55581</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right 7 Cols: Interactive Recruiter Message Generator -->
+          <div class="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-5">
+            <div class="flex items-center justify-between">
+              <h3 data-i18n="form_title" class="text-lg sm:text-xl font-bold text-white">Generator Pesan Rekruter Interaktif</h3>
+              <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 font-mono text-[11px]">INSTANT DISPATCH</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="recName" data-i18n="form_name_lbl" class="block text-xs font-mono text-slate-400 mb-1.5">Nama Anda / Rekruter</label>
+                <input type="text" id="recName" oninput="updateRecruiterPreview()" placeholder="Contoh: Budi Santoso" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 focus:border-teal-400 focus:outline-none text-sm text-white placeholder-slate-500" />
+              </div>
+              <div>
+                <label for="recCompany" data-i18n="form_comp_lbl" class="block text-xs font-mono text-slate-400 mb-1.5">Perusahaan / Instansi</label>
+                <input type="text" id="recCompany" oninput="updateRecruiterPreview()" placeholder="Contoh: PT Teknologi Nusantara" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 focus:border-teal-400 focus:outline-none text-sm text-white placeholder-slate-500" />
+              </div>
+            </div>
+
+            <div>
+              <label for="recRole" data-i18n="form_role_lbl" class="block text-xs font-mono text-slate-400 mb-1.5">Topik / Posisi yang Ditawarkan</label>
+              <select id="recRole" onchange="updateRecruiterPreview()" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 focus:border-teal-400 focus:outline-none text-sm text-white">
+                <option value="Data Analyst">Data Analyst / Business Intelligence</option>
+                <option value="Operations & Logistics Data Analyst">Operations &amp; Logistics Data Analyst</option>
+                <option value="Machine Learning / AI Engineer">Machine Learning / AI Engineer</option>
+                <option value="Kolaborasi Riset / Proyek Data">Kolaborasi Riset / Proyek Pengolahan Data</option>
+              </select>
+            </div>
+
+            <!-- Live Generated Message Preview -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span data-i18n="form_prev_lbl" class="text-xs font-mono text-slate-400">Pratinjau Pesan Otomatis</span>
+                <span class="text-[11px] font-mono text-teal-400">Siap Kirim</span>
+              </div>
+              <div id="recMessagePreview" class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans"></div>
+            </div>
+
+            <!-- Dispatch Action Buttons -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <button type="button" onclick="sendViaEmail()" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition-all">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span data-i18n="btn_send_email">Kirim via Email</span>
+              </button>
+
+              <button type="button" onclick="sendViaWhatsApp()" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                <span data-i18n="btn_send_wa">Hubungi via WhatsApp</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-slate-200 dark:border-slate-800/80 py-8 px-4 sm:px-6 lg:px-8 text-center text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="font-mono">
+        &copy; 2026 <span class="font-semibold text-slate-800 dark:text-slate-200">Zahfar Aziz Ferdian</span>. All rights reserved.
+      </div>
+      <div class="font-mono text-xs text-teal-600 dark:text-teal-400">
+        Data &amp; Operations Analyst &bull; Machine Learning &amp; Big Data Optimization
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       CASE STUDY DETAIL MODAL
+       ========================================================= -->
+  <div id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-slate-950/75 backdrop-blur-sm">
+    <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-6 sm:p-8 shadow-2xl">
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+        <div>
+          <span id="modalCategory" class="inline-block px-2.5 py-1 rounded-lg bg-teal-500/15 text-teal-600 dark:text-teal-400 font-mono text-xs font-bold mb-2"></span>
+          <h3 id="modalTitle" class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white leading-snug"></h3>
+          <p id="modalContext" class="text-xs sm:text-sm font-mono text-slate-500 dark:text-slate-400 mt-1"></p>
+        </div>
+        <button type="button" onclick="closeProjectModal()" aria-label="Tutup Detail Proyek" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-rose-500 transition-colors">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="py-5 space-y-5 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+        <div>
+          <h4 data-i18n="modal_sec_challenge" class="font-mono text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400 mb-1.5">Latar Belakang &amp; Tantangan</h4>
+          <p id="modalChallenge"></p>
+        </div>
+
+        <div>
+          <h4 data-i18n="modal_sec_solution" class="font-mono text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-1.5">Metodologi &amp; Solusi Teknis</h4>
+          <p id="modalSolution"></p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+          <h4 data-i18n="modal_sec_impact" class="font-mono text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 mb-2">Hasil &amp; Dampak Terukur</h4>
+          <ul id="modalMetrics" class="space-y-1.5 list-disc list-inside text-slate-800 dark:text-slate-200 font-medium"></ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="modal_sec_stack" class="font-mono text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Teknologi &amp; Perangkat</h4>
+          <div id="modalTags" class="flex flex-wrap gap-2"></div>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-end gap-3">
+        <a id="modalExternalLink" href="#" target="_blank" rel="noopener noreferrer" class="hidden inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 font-bold text-sm hover:opacity-95 transition-opacity">
+          <span data-i18n="modal_open_link">Buka Artikel Jurnal (JAIC)</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+        <button type="button" onclick="closeProjectModal()" data-i18n="modal_close" class="px-5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold text-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       TOAST NOTIFICATION (NO ALERT())
+       ========================================================= -->
+  <div id="toastBanner" role="status" aria-live="polite" class="fixed bottom-5 right-5 z-50 transform translate-y-24 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white border border-teal-500/50 shadow-2xl">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+      <span id="toastText" class="text-xs sm:text-sm font-medium"></span>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       JAVASCRIPT: STATE, BILINGUAL ENGINE, SIMULATOR & INTERACTIONS
+       ========================================================= -->
+  <script>
+    // Global Application State
+    let currentLang = 'id';
+    let currentSimMode = 'ipca';
+    let currentProjectFilter = 'all';
+    let currentSkillTab = 'data';
+
+    // Comprehensive Bilingual Dictionary (ID / EN)
+    const i18nData = {
+      id: {
+        nav_about: 'Tentang',
+        nav_sim: 'Simulasi Riset',
+        nav_projects: 'Proyek',
+        nav_skills: 'Keahlian',
+        nav_exp: 'Pengalaman',
+        nav_cert: 'Sertifikasi',
+        nav_contact: 'Kontak',
+        hero_badge: 'Tersedia untuk Peluang Kerja & Kolaborasi',
+        hero_summary: 'Lulusan S1 Informatika Universitas Teknologi Yogyakarta (IPK 3,46) dengan kombinasi pengalaman kerja praktis 18 bulan di bidang analisis data operasional logistik dan riset terapan Machine Learning. Berpengalaman mengelola data lalu lintas ribuan paket, audit stock opname, serta visualisasi performa harian berbasis Excel tingkat lanjut di Logistic Lazada. Berfokus pada pengolahan Big Data, Computer Vision, dan optimasi efisiensi komputasi model klasifikasi yang telah terpublikasi di jurnal ilmiah terakreditasi Sinta 3 (JAIC).',
+        btn_explore_projects: 'Jelajahi Proyek',
+        btn_sinta: 'Lihat Publikasi Sinta 3',
+        btn_copy_email: 'Salin Email',
+        kpi1_val: '18 Bulan',
+        kpi1_desc: 'Pengalaman Operasional & Data Logistik (Lazada)',
+        kpi2_desc: 'Efisiensi Waktu Pelatihan SVM via PCA/IPCA',
+        kpi3_desc: 'Publikasi Jurnal Ilmiah JAIC (Penulis Pertama)',
+        kpi4_desc: 'IPK S1 Informatika UTY (Sistem Cerdas)',
+        sim_title: 'Simulator & Benchmark Optimasi Komputasi Big Data (PCA vs IPCA)',
+        sim_subtitle: 'Eksplorasi hasil pengujian empiris Tugas Akhir S1 Informatika pada dataset citra digital berukuran 209 MB. Pilih skenario algoritma di bawah untuk membandingkan waktu pelatihan, konsumsi RAM, dan stabilitas akurasi.',
+        sim_m1_title: 'Baseline SVM (Tanpa Reduksi Dimensi)',
+        sim_m1_short: 'Pemrosesan matriks fitur mentah 100% secara penuh',
+        sim_m2_title: 'SVM + PCA Standar',
+        sim_m2_short: 'Reduksi dimensi tunggal dalam satu alokasi memori',
+        sim_m3_title: 'SVM + Incremental PCA (IPCA)',
+        sim_m3_short: 'Batch Processing bertahap untuk Big Data >200 MB',
+        sim_label_time: 'Waktu Pelatihan (Training Time)',
+        sim_label_mem: 'Konsumsi Memori / RAM',
+        sim_label_acc: 'Retensi Akurasi & Stabilitas Model',
+        sim_card_feat: 'Dimensi Fitur',
+        sim_card_speed: 'Speedup Komputasi',
+        sim_card_ram: 'Hemat Memori',
+        arch_badge: 'Arsitektur Pipeline Streamlit',
+        arch_title: 'Alur Pemrosesan Big Data & Evaluasi Model',
+        arch_desc: 'Aplikasi interaktif berbasis Python & Streamlit dirancang untuk menangani input citra digital maupun dataset tabular (CSV) berkapasitas besar secara otomatis:',
+        arch_s1_t: 'Ingestion & Data Preprocessing',
+        arch_s1_d: 'Normalisasi piksel citra, pembersihan fitur tabular, dan pembagian chunk/batch otomatis.',
+        arch_s2_t: 'Ekstraksi Fitur PCA / Incremental PCA',
+        arch_s2_d: 'Kompresi dimensi >99% dengan mempertahankan komponen varians utama tanpa membebani RAM.',
+        arch_s3_t: 'Klasifikasi SVM / KNN & Metrik Evaluasi',
+        arch_s3_d: 'Audit performa real-time: Accuracy, F1-Score, MSE, PSNR, serta proyeksi visual T-SNE.',
+        proj_title: 'Proyek Unggulan & Publikasi Ilmiah',
+        proj_subtitle: 'Klik kartu proyek untuk meninjau studi kasus teknis, metodologi, dan dampak terukur secara mendalam.',
+        filter_all: 'Semua',
+        filter_ml: 'Machine Learning & Big Data',
+        filter_pub: 'Publikasi Ilmiah',
+        filter_ops: 'Data & Operasional',
+        skill_title: 'Keahlian Teknis & Perangkat Kerja',
+        skill_subtitle: 'Kombinasi penguasaan analisis operasional berbasis spreadsheet tingkat lanjut dan rekayasa algoritma Machine Learning berbasis Python.',
+        tab_data: 'Data Analysis & Reporting',
+        tab_ml: 'Machine Learning & AI',
+        tab_prog: 'Programming & Evaluasi',
+        tab_tools: 'Tools & Komunikasi',
+        exp_title: 'Pengalaman Kerja, Pendidikan & Organisasi',
+        exp1_badge: 'PENDIDIKAN TINGGI',
+        exp1_role: 'S1 Informatika (IPK 3,46 / 4,00)',
+        exp1_desc: 'Konsentrasi Sistem Cerdas dengan fokus riset pada pengolahan data skala besar (Big Data), Computer Vision, ekstraksi fitur Principal Component Analysis (PCA & IPCA), serta optimasi efisiensi komputasi algoritma klasifikasi Machine Learning.',
+        exp2_badge: 'ORGANISASI & KOORDINASI PROYEK',
+        exp2_date: 'April – Juni 2024',
+        exp2_role: 'Koordinator Kegiatan FESTIKA 2024',
+        exp2_desc: 'Berperan aktif dalam koordinasi proyek dan pelaksanaan acara teknologi bertema "Merajut Dunia Digital: Membentuk Pondasi, Mengeksplorasi Kreativitas, dan Membuka Peluang Baru", memastikan kolaborasi lintas divisi dan kelancaran agenda peserta.',
+        exp3_badge: 'PENGALAMAN KERJA (18 BULAN)',
+        exp3_date: 'Maret 2021 – Agustus 2022',
+        exp3_role: 'Warehouse Staff (Operational & Data Administration)',
+        exp3_b1: 'Mengelola dan menganalisis data lalu lintas paket (masuk/keluar) serta performa harian gudang dan kurir menggunakan fungsi tingkat lanjut Microsoft Excel (VLOOKUP, HLOOKUP, Pivot Table).',
+        exp3_b2: 'Merancang visualisasi data operasional harian guna mempermudah pemantauan dan evaluasi performa logistik oleh jajaran manajemen.',
+        exp3_b3: 'Melaksanakan manajemen inventaris audit stock opname dan menyusun laporan status pengiriman harian (paket terkirim, tertunda, reschedule, batal, dan rusak).',
+        exp3_b4: 'Menyortir, memindai (scan), dan memetakan distribusi ribuan paket harian kepada kurir berdasarkan zonasi wilayah untuk efisiensi rute, serta berkomunikasi proaktif dengan pelanggan terkait konfirmasi kendala pengiriman.',
+        cert_title: 'Sertifikasi Resmi & Kompetensi',
+        cert1_name: 'Machine Learning Profesional',
+        cert1_date: 'Feb 2026 – Feb 2031',
+        cert2_name: 'Sertifikasi TOEFL',
+        cert2_date: 'Feb 2026 – Feb 2028',
+        cert3_name: 'Sertifikasi Kompetensi SIAPkerja',
+        cert3_date: 'Terverifikasi Resmi',
+        cert_valid: 'Masa Berlaku',
+        cert_status: 'Status',
+        contact_title: 'Mari Berkolaborasi & Diskusi Peluang',
+        contact_subtitle: 'Terbuka untuk posisi Data Analyst, Operations Analyst, Machine Learning Engineer, maupun kolaborasi riset pengolahan data.',
+        contact_loc_label: 'Domisili',
+        form_title: 'Generator Pesan Rekruter Interaktif',
+        form_name_lbl: 'Nama Anda / Rekruter',
+        form_comp_lbl: 'Perusahaan / Instansi',
+        form_role_lbl: 'Topik / Posisi yang Ditawarkan',
+        form_prev_lbl: 'Pratinjau Pesan Otomatis',
+        btn_send_email: 'Kirim via Email',
+        btn_send_wa: 'Hubungi via WhatsApp',
+        modal_sec_challenge: 'Latar Belakang & Tantangan',
+        modal_sec_solution: 'Metodologi & Solusi Teknis',
+        modal_sec_impact: 'Hasil & Dampak Terukur',
+        modal_sec_stack: 'Teknologi & Perangkat',
+        modal_open_link: 'Buka Artikel Jurnal (JAIC)',
+        modal_close: 'Tutup',
+        toast_copied: 'Email zahfaraf14@gmail.com berhasil disalin ke clipboard!',
+        card_detail_cta: 'Lihat Studi Kasus'
+      },
+      en: {
+        nav_about: 'About',
+        nav_sim: 'Research Sim',
+        nav_projects: 'Projects',
+        nav_skills: 'Skills',
+        nav_exp: 'Experience',
+        nav_cert: 'Certifications',
+        nav_contact: 'Contact',
+        hero_badge: 'Available for Work Opportunities & Collaboration',
+        hero_summary: 'B.Sc. in Informatics graduate from Universitas Teknologi Yogyakarta (GPA 3.46) combining 18 months of hands-on logistics operational data analysis experience with applied Machine Learning research. Experienced in managing daily traffic data for thousands of parcels, stock opname audits, and advanced Excel operational dashboards at Logistic Lazada. Focused on Big Data processing, Computer Vision, and computational optimization published in a Sinta 3 accredited scientific journal (JAIC).',
+        btn_explore_projects: 'Explore Projects',
+        btn_sinta: 'View Sinta 3 Publication',
+        btn_copy_email: 'Copy Email',
+        kpi1_val: '18 Months',
+        kpi1_desc: 'Logistics Operations & Data Experience (Lazada)',
+        kpi2_desc: 'SVM Training Time Reduction via PCA/IPCA',
+        kpi3_desc: 'JAIC Scientific Journal Publication (First Author)',
+        kpi4_desc: 'B.Sc. Informatics GPA at UTY (Intelligent Systems)',
+        sim_title: 'Big Data Computation Optimization Simulator & Benchmark (PCA vs IPCA)',
+        sim_subtitle: 'Explore empirical benchmark results from Zahfar’s B.Sc. thesis on a 209 MB digital image dataset. Select an algorithm scenario below to compare training time, RAM footprint, and accuracy stability.',
+        sim_m1_title: 'Baseline SVM (No Dimensionality Reduction)',
+        sim_m1_short: 'Full 100% raw feature matrix processing',
+        sim_m2_title: 'SVM + Standard PCA',
+        sim_m2_short: 'Single-pass dimensionality reduction in memory',
+        sim_m3_title: 'SVM + Incremental PCA (IPCA)',
+        sim_m3_short: 'Batch processing architecture for Big Data >200 MB',
+        sim_label_time: 'Training Time',
+        sim_label_mem: 'Memory / RAM Consumption',
+        sim_label_acc: 'Accuracy Retention & Model Stability',
+        sim_card_feat: 'Feature Dimension',
+        sim_card_speed: 'Compute Speedup',
+        sim_card_ram: 'Memory Saved',
+        arch_badge: 'Streamlit Pipeline Architecture',
+        arch_title: 'Big Data Processing & Model Evaluation Flow',
+        arch_desc: 'Interactive web application built with Python & Streamlit engineered to process large digital image datasets and tabular CSV files automatically:',
+        arch_s1_t: 'Ingestion & Data Preprocessing',
+        arch_s1_d: 'Image pixel normalization, tabular feature cleaning, and automated chunk/batch partitioning.',
+        arch_s2_t: 'PCA / Incremental PCA Feature Extraction',
+        arch_s2_d: '>99% dimensionality compression retaining principal variance components without RAM spikes.',
+        arch_s3_t: 'SVM / KNN Classification & Evaluation Metrics',
+        arch_s3_d: 'Real-time performance audit: Accuracy, F1-Score, MSE, PSNR, and T-SNE visual projection.',
+        proj_title: 'Featured Projects & Scientific Publications',
+        proj_subtitle: 'Click any project card to inspect the technical case study, methodology, and measurable impact.',
+        filter_all: 'All',
+        filter_ml: 'Machine Learning & Big Data',
+        filter_pub: 'Scientific Publication',
+        filter_ops: 'Data & Operations',
+        skill_title: 'Technical Skills & Toolset',
+        skill_subtitle: 'Combining advanced spreadsheet-driven operational analytics with Python-based Machine Learning engineering.',
+        tab_data: 'Data Analysis & Reporting',
+        tab_ml: 'Machine Learning & AI',
+        tab_prog: 'Programming & Evaluation',
+        tab_tools: 'Tools & Communication',
+        exp_title: 'Work Experience, Education & Organization',
+        exp1_badge: 'HIGHER EDUCATION',
+        exp1_role: 'B.Sc. in Informatics (GPA 3.46 / 4.00)',
+        exp1_desc: 'Intelligent Systems concentration focusing on Big Data processing, Computer Vision, Principal Component Analysis (PCA & IPCA) feature extraction, and computational optimization for Machine Learning classifiers.',
+        exp2_badge: 'ORGANIZATION & PROJECT COORDINATION',
+        exp2_date: 'April – June 2024',
+        exp2_role: 'Event & Project Coordinator — FESTIKA 2024',
+        exp2_desc: 'Coordinated cross-functional teams for the technology event themed "Weaving the Digital World: Building Foundations, Exploring Creativity, and Opening New Opportunities".',
+        exp3_badge: 'WORK EXPERIENCE (18 MONTHS)',
+        exp3_date: 'March 2021 – August 2022',
+        exp3_role: 'Warehouse Staff (Operational & Data Administration)',
+        exp3_b1: 'Managed and analyzed inbound/outbound parcel traffic and daily courier/warehouse performance using advanced Microsoft Excel functions (VLOOKUP, HLOOKUP, Pivot Table).',
+        exp3_b2: 'Designed daily operational data visualizations to streamline management monitoring and logistics performance evaluation.',
+        exp3_b3: 'Executed stock opname inventory audits and compiled structured daily delivery status reports (delivered, delayed, rescheduled, canceled, and damaged).',
+        exp3_b4: 'Sorted, scanned, and mapped daily distribution of thousands of parcels by courier zone for route efficiency, while proactively resolving delivery issues with customers.',
+        cert_title: 'Official Certifications & Credentials',
+        cert1_name: 'Machine Learning Professional',
+        cert1_date: 'Feb 2026 – Feb 2031',
+        cert2_name: 'TOEFL Certification',
+        cert2_date: 'Feb 2026 – Feb 2028',
+        cert3_name: 'SIAPkerja Competency Certification',
+        cert3_date: 'Officially Verified',
+        cert_valid: 'Validity Period',
+        cert_status: 'Status',
+        contact_title: 'Let’s Collaborate & Discuss Opportunities',
+        contact_subtitle: 'Open to Data Analyst, Operations Analyst, Machine Learning Engineer roles, and data processing research collaborations.',
+        contact_loc_label: 'Location',
+        form_title: 'Interactive Recruiter Message Generator',
+        form_name_lbl: 'Your Name / Recruiter',
+        form_comp_lbl: 'Company / Organization',
+        form_role_lbl: 'Topic / Role Offered',
+        form_prev_lbl: 'Auto-Generated Message Preview',
+        btn_send_email: 'Send via Email',
+        btn_send_wa: 'Contact via WhatsApp',
+        modal_sec_challenge: 'Background & Challenge',
+        modal_sec_solution: 'Methodology & Technical Solution',
+        modal_sec_impact: 'Measurable Results & Impact',
+        modal_sec_stack: 'Technologies & Tools',
+        modal_open_link: 'Open Journal Article (JAIC)',
+        modal_close: 'Close',
+        toast_copied: 'Email zahfaraf14@gmail.com copied to clipboard!',
+        card_detail_cta: 'Inspect Case Study'
+      }
+    };
+
+    // Simulator Mode Dataset (Verified Empirical Numbers)
+    const simModesData = {
+      baseline: {
+        id: {
+          heading: 'Baseline SVM (Tanpa Reduksi Dimensi)',
+          badge: 'Rawan Memory Error pada Big Data',
+          badgeClass: 'bg-rose-500/15 text-rose-500 border-rose-500/30',
+          timeVal: '1.675,16 detik (~27,9 menit)',
+          timePct: '100%',
+          timeBarClass: 'from-rose-500 to-amber-500',
+          memVal: '330 MB (Puncak Alokasi)',
+          memPct: '100%',
+          memBarClass: 'from-rose-500 to-orange-500',
+          accVal: '100% Baseline (Rentan Noise Tinggi)',
+          accPct: '96%',
+          feat: '100% (Raw)',
+          speed: '1,0x (Baseline)',
+          ram: '0% (Baseline)',
+          note: 'Pemrosesan matriks fitur mentah secara penuh pada dataset citra 209 MB membutuhkan waktu 1.675,16 detik serta konsumsi RAM 330 MB, sehingga sangat rawan mengalami Memory Error pada lingkungan Big Data.'
+        },
+        en: {
+          heading: 'Baseline SVM (No Dimensionality Reduction)',
+          badge: 'Prone to Memory Error on Big Data',
+          badgeClass: 'bg-rose-500/15 text-rose-500 border-rose-500/30',
+          timeVal: '1,675.16 seconds (~27.9 mins)',
+          timePct: '100%',
+          timeBarClass: 'from-rose-500 to-amber-500',
+          memVal: '330 MB (Peak Allocation)',
+          memPct: '100%',
+          memBarClass: 'from-rose-500 to-orange-500',
+          accVal: '100% Baseline (High Noise Sensitivity)',
+          accPct: '96%',
+          feat: '100% (Raw)',
+          speed: '1.0x (Baseline)',
+          ram: '0% (Baseline)',
+          note: 'Processing 100% raw feature matrices on a 209 MB image dataset takes 1,675.16 seconds and 330 MB RAM, making it highly prone to Memory Errors in Big Data workloads.'
+        }
+      },
+      pca: {
+        id: {
+          heading: 'SVM + PCA Standar (Principal Component Analysis)',
+          badge: 'Optimal Skala Kecil–Menengah',
+          badgeClass: 'bg-cyan-500/15 text-cyan-500 border-cyan-500/30',
+          timeVal: '6,00 detik',
+          timePct: '3.5%',
+          timeBarClass: 'from-cyan-500 to-teal-400',
+          memVal: '0,83 MB',
+          memPct: '2.5%',
+          memBarClass: 'from-cyan-500 to-emerald-400',
+          accVal: '≥ 97,5% (Delta <3%)',
+          accPct: '97.5%',
+          feat: 'Reduksi >99%',
+          speed: '279,2x Lebih Cepat',
+          ram: '99,75% Lebih Hemat',
+          note: 'Optimal untuk dataset skala kecil hingga menengah tanpa overhead pemrosesan batch. Berhasil memangkas waktu pelatihan menjadi 6,00 detik dan memori 0,83 MB, namun tetap memuat seluruh matriks ke RAM saat dekomposisi awal.'
+        },
+        en: {
+          heading: 'SVM + Standard PCA (Principal Component Analysis)',
+          badge: 'Optimal for Small–Medium Scale',
+          badgeClass: 'bg-cyan-500/15 text-cyan-500 border-cyan-500/30',
+          timeVal: '6.00 seconds',
+          timePct: '3.5%',
+          timeBarClass: 'from-cyan-500 to-teal-400',
+          memVal: '0.83 MB',
+          memPct: '2.5%',
+          memBarClass: 'from-cyan-500 to-emerald-400',
+          accVal: '≥ 97.5% (Delta <3%)',
+          accPct: '97.5%',
+          feat: '>99% Reduced',
+          speed: '279.2x Faster',
+          ram: '99.75% Saved',
+          note: 'Optimal for small-to-medium datasets without batch overhead. Cuts training time to 6.00 seconds and memory to 0.83 MB, though it still loads the full matrix into RAM during initial decomposition.'
+        }
+      },
+      ipca: {
+        id: {
+          heading: 'SVM + Incremental PCA (IPCA - Batch Processing)',
+          badge: 'Solusi Krusial Bebas Memory Error (>200 MB)',
+          badgeClass: 'bg-emerald-500/15 text-emerald-500 border-emerald-500/30',
+          timeVal: '6,00 detik',
+          timePct: '3.5%',
+          timeBarClass: 'from-emerald-500 to-teal-400',
+          memVal: '0,83 MB',
+          memPct: '2.5%',
+          memBarClass: 'from-teal-400 to-cyan-400',
+          accVal: '≥ 97,5% (Delta <3% / +Noise Reduction)',
+          accPct: '98.5%',
+          feat: 'Reduksi >99%',
+          speed: '279,2x Lebih Cepat',
+          ram: '99,75% Lebih Hemat',
+          note: 'Solusi krusial bebas memory error untuk dataset >200 MB. Memproses data secara bertahap per-batch sehingga waktu training turun dari 1.675,16 detik ke 6 detik, RAM dari 330 MB ke 0,83 MB, serta menjaga penurunan akurasi <3% (bahkan meningkat pada kondisi tertentu berkat reduksi noise).'
+        },
+        en: {
+          heading: 'SVM + Incremental PCA (IPCA - Batch Processing)',
+          badge: 'Memory-Error-Free Solution (>200 MB)',
+          badgeClass: 'bg-emerald-500/15 text-emerald-500 border-emerald-500/30',
+          timeVal: '6.00 seconds',
+          timePct: '3.5%',
+          timeBarClass: 'from-emerald-500 to-teal-400',
+          memVal: '0.83 MB',
+          memPct: '2.5%',
+          memBarClass: 'from-teal-400 to-cyan-400',
+          accVal: '≥ 97.5% (Delta <3% / +Noise Reduction)',
+          accPct: '98.5%',
+          feat: '>99% Reduced',
+          speed: '279.2x Faster',
+          ram: '99.75% Saved',
+          note: 'Crucial memory-error-free architecture for datasets >200 MB. Processes data in sequential mini-batches, cutting training time from 1,675.16s to 6s, RAM from 330 MB to 0.83 MB, with accuracy drop <3% (and even improving in noisy scenarios).'
+        }
+      }
+    };
+
+    // Featured Projects & Publications Data
+    const projectsData = [
+      {
+        id: 'proj-ipca',
+        categories: ['ml'],
+        badge: { id: 'Machine Learning & Big Data', en: 'Machine Learning & Big Data' },
+        year: '2026',
+        highlightMetric: '1.675,16s → 6s | 330 MB → 0,83 MB',
+        title: {
+          id: 'Aplikasi Optimasi Komputasi Klasifikasi Big Data (PCA & IPCA)',
+          en: 'Big Data Classification Computation Optimization App (PCA & IPCA)'
+        },
+        context: {
+          id: 'Tugas Akhir S1 Informatika — Universitas Teknologi Yogyakarta (2026)',
+          en: 'B.Sc. Informatics Thesis — Universitas Teknologi Yogyakarta (2026)'
+        },
+        summary: {
+          id: 'Sistem evaluasi berbasis Streamlit untuk menguji efisiensi reduksi dimensi PCA dan Incremental PCA (IPCA) pada algoritma SVM & KNN menggunakan dataset citra 209 MB serta tabular CSV.',
+          en: 'Streamlit-based evaluation platform benchmarking PCA and Incremental PCA (IPCA) dimensionality reduction on SVM & KNN across a 209 MB image dataset and tabular CSV workloads.'
+        },
+        challenge: {
+          id: 'Pelatihan model klasifikasi Machine Learning (khususnya SVM) pada dataset citra digital berdimensi tinggi (209 MB) membutuhkan waktu komputasi sangat lama (1.675,16 detik) dan konsumsi memori besar (330 MB) yang kerap memicu kegagalan memori (Memory Error).',
+          en: 'Training ML classifiers (especially SVM) on high-dimensional digital image datasets (209 MB) required 1,675.16 seconds and 330 MB RAM, frequently triggering out-of-memory failures.'
+        },
+        solution: {
+          id: 'Merancang dan membangun aplikasi analitik berbasis Python dan Streamlit yang mengimplementasikan PCA standar dan Incremental PCA (IPCA) berbasis batch processing. Sistem memungkinkan pengguna mengunggah dataset citra maupun CSV, mengatur jumlah komponen utama, serta membandingkan performa SVM dan KNN secara langsung.',
+          en: 'Engineered an interactive Python & Streamlit application implementing standard PCA and batch-based Incremental PCA (IPCA), enabling users to benchmark SVM and KNN across image and CSV datasets.'
+        },
+        metrics: {
+          id: [
+            'Memangkas waktu pelatihan SVM pada dataset 209 MB dari 1.675,16 detik menjadi 6,00 detik (efisiensi 99,6%).',
+            'Menekan konsumsi memori RAM dari 330 MB menjadi hanya 0,83 MB dengan reduksi dimensi fitur >99%.',
+            'Menjaga selisih penurunan akurasi tetap di bawah 3% (bahkan meningkat pada kondisi tertentu berkat reduksi noise).'
+          ],
+          en: [
+            'Reduced SVM training time on a 209 MB dataset from 1,675.16 seconds down to 6.00 seconds (99.6% efficiency).',
+            'Compressed RAM consumption from 330 MB to just 0.83 MB with >99% feature dimensionality reduction.',
+            'Kept accuracy variance below 3% (and improved accuracy under noisy conditions via noise filtering).'
+          ]
+        },
+        tags: ['Python', 'Streamlit', 'Scikit-Learn', 'Pandas', 'Matplotlib', 'Seaborn', 'PCA / IPCA', 'SVM & KNN'],
+        externalUrl: ''
+      },
+      {
+        id: 'proj-jaic',
+        categories: ['pub', 'ml'],
+        badge: { id: 'Publikasi Jurnal Ilmiah Sinta 3', en: 'Sinta 3 Scientific Publication' },
+        year: '2026',
+        highlightMetric: 'Penulis Pertama • JAIC (Sinta 3 & DOAJ)',
+        title: {
+          id: 'Publikasi Jurnal Sinta 3: Optimasi Klasifikasi Citra SVM melalui Reduksi Dimensi PCA',
+          en: 'Sinta 3 Journal Publication: Optimization of SVM Model Performance in Image Classification via PCA'
+        },
+        context: {
+          id: 'Journal of Applied Informatics and Computing (JAIC) — Terakreditasi Sinta 3 & DOAJ (2026)',
+          en: 'Journal of Applied Informatics and Computing (JAIC) — Accredited Sinta 3 & DOAJ Indexed (2026)'
+        },
+        summary: {
+          id: 'Artikel ilmiah berjudul "Optimization of Support Vector Machine Model Performance in Image Classification through Dimension Reduction with Principal Component Analysis (PCA)" sebagai Penulis Pertama.',
+          en: 'Peer-reviewed scientific paper titled "Optimization of Support Vector Machine Model Performance in Image Classification through Dimension Reduction with Principal Component Analysis (PCA)" as First Author.'
+        },
+        challenge: {
+          id: 'Data citra beresolusi tinggi memiliki ribuan fitur piksel yang saling berkorelasi (redundan), memperlambat konvergensi hyperplane Support Vector Machine dan menyulitkan interpretasi pemisahan kelas.',
+          en: 'High-resolution image data contains thousands of correlated pixel features that slow down Support Vector Machine convergence and complicate class separability analysis.'
+        },
+        solution: {
+          id: 'Melakukan eksperimen ekstraksi fitur menggunakan Principal Component Analysis (PCA) sebelum klasifikasi SVM, disertai evaluasi kualitas rekonstruksi citra dan pemisahan klaster secara menyeluruh.',
+          en: 'Conducted empirical feature extraction experiments using Principal Component Analysis (PCA) prior to SVM classification, backed by comprehensive image quality and cluster separability metrics.'
+        },
+        metrics: {
+          id: [
+            'Terbit resmi sebagai Penulis Pertama di Journal of Applied Informatics and Computing (JAIC) terakreditasi Sinta 3 & terindeks DOAJ.',
+            'Evaluasi komprehensif mencakup Accuracy, F1-Score, Mean Squared Error (MSE), Peak Signal-to-Noise Ratio (PSNR), serta proyeksi visual T-SNE.',
+            'Membuktikan akselerasi komputasi klasifikasi citra secara signifikan dengan integritas fitur tetap terjaga.'
+          ],
+          en: [
+            'Published as First Author in Journal of Applied Informatics and Computing (JAIC), accredited Sinta 3 & indexed in DOAJ.',
+            'Evaluated rigorously via Accuracy, F1-Score, Mean Squared Error (MSE), Peak Signal-to-Noise Ratio (PSNR), and T-SNE visual projections.',
+            'Demonstrated dramatic compute acceleration in image classification while preserving structural feature integrity.'
+          ]
+        },
+        tags: ['Computer Vision', 'SVM', 'PCA', 'T-SNE', 'PSNR & MSE', 'F1-Score', 'Sinta 3 Publication'],
+        externalUrl: 'https://jurnal.polibatam.ac.id/index.php/JAIC/article/view/11675'
+      },
+      {
+        id: 'proj-webcompress',
+        categories: ['ml'],
+        badge: { id: 'Machine Learning & Big Data', en: 'Machine Learning & Big Data' },
+        year: '2025 – 2026',
+        highlightMetric: 'End-to-End Web Pipeline • 2 Studi Kasus',
+        title: {
+          id: 'Sistem Web Kompresi Big Data untuk Analisis Pengolahan Data',
+          en: 'Web-Based Big Data Compression System for Data Processing Analytics'
+        },
+        context: {
+          id: 'Proyek Profesional — Studi Kasus Mental Health Analysis & Chess Kaggle (2025/2026)',
+          en: 'Professional Project — Mental Health Analysis & Chess Kaggle Case Studies (2025/2026)'
+        },
+        summary: {
+          id: 'Platform web komprehensif dengan fitur login/autentikasi, pra-pemrosesan data otomatis, reduksi dimensi PCA, dashboard evaluasi performa model, serta rekonstruksi dan ekspor hasil analisis.',
+          en: 'End-to-end web platform featuring user authentication, automated data preprocessing, PCA dimensionality reduction, model evaluation dashboards, and data reconstruction/export.'
+        },
+        challenge: {
+          id: 'Kebutuhan akan antarmuka terpadu yang memudahkan analis data mengompresi dataset tabular kompleks multi-atribut (seperti Mental Health Analysis dan Chess Kaggle) tanpa harus menulis skrip manual berulang kali.',
+          en: 'Need for an integrated web workflow allowing analysts to compress multi-attribute tabular datasets (Mental Health Analysis & Chess Kaggle) without repetitive manual scripting.'
+        },
+        solution: {
+          id: 'Membangun sistem web end-to-end yang mengintegrasikan modul autentikasi pengguna, pipeline pembersihan & encoding data otomatis, kompresi PCA, visualisasi metrik evaluasi, hingga rekonstruksi dan unduh hasil olahan.',
+          en: 'Built an end-to-end web system integrating user login authentication, automated cleaning & encoding pipelines, PCA compression, evaluation dashboards, and data reconstruction/export.'
+        },
+        metrics: {
+          id: [
+            'Berhasil diuji pada dua dataset berbeda domain: Mental Health Analysis dan Chess Kaggle.',
+            'Menyediakan alur kerja lengkap dari autentikasi, preprocessing, reduksi dimensi, hingga rekonstruksi dan ekspor laporan analisis.',
+            'Mempercepat eksplorasi variabel utama pada dataset berdimensi tinggi secara visual dan terstruktur.'
+          ],
+          en: [
+            'Validated across two distinct domain datasets: Mental Health Analysis and Chess Kaggle.',
+            'Delivered a complete workflow from login authentication and preprocessing to dimensionality reduction, reconstruction, and export.',
+            'Accelerated visual exploration of principal components across high-dimensional datasets.'
+          ]
+        },
+        tags: ['Python', 'Data Preprocessing', 'PCA Compression', 'Authentication UI', 'Evaluation Dashboard', 'Data Export'],
+        externalUrl: ''
+      },
+      {
+        id: 'proj-lazada',
+        categories: ['ops'],
+        badge: { id: 'Data & Operasional', en: 'Data & Operations' },
+        year: '2021 – 2022',
+        highlightMetric: '18 Bulan • Ribuan Paket/Hari • Excel BI',
+        title: {
+          id: 'Sistem Pelaporan & Visualisasi Kinerja Operasional Gudang',
+          en: 'Warehouse Operational Performance Reporting & Visualization System'
+        },
+        context: {
+          id: 'Logistic Lazada — Cibinong, Kab. Bogor, Jawa Barat (Maret 2021 – Agustus 2022)',
+          en: 'Logistic Lazada — Cibinong, Bogor Regency, West Java (March 2021 – August 2022)'
+        },
+        summary: {
+          id: 'Pengolahan data lalu lintas paket harian & performa kurir menggunakan Excel tingkat lanjut (VLOOKUP, HLOOKUP, Pivot Table), audit stock opname, pelaporan status pengiriman, dan pemetaan zonasi distribusi.',
+          en: 'Daily parcel traffic & courier performance analytics using advanced Excel (VLOOKUP, HLOOKUP, Pivot Table), stock opname audits, delivery status reporting, and regional zone distribution.'
+        },
+        challenge: {
+          id: 'Tingginya volume pergerakan ribuan paket masuk dan keluar setiap hari membutuhkan pencatatan akurat, pelacakan status pengiriman bermasalah secara cepat, serta pembagian zonasi kurir yang efisien.',
+          en: 'High daily throughput of thousands of inbound and outbound parcels required accurate reconciliation, rapid tracking of exception statuses, and efficient courier zone allocation.'
+        },
+        solution: {
+          id: 'Menyusun template pelaporan dan dashboard operasional berbasis Microsoft Excel (VLOOKUP, HLOOKUP, Pivot Table) untuk mengonsolidasikan data scan paket harian, hasil audit stock opname, serta memetakan rute distribusi kurir per zona.',
+          en: 'Developed standardized Microsoft Excel reporting templates and dashboards (VLOOKUP, HLOOKUP, Pivot Table) consolidating daily scan logs, stock opname audits, and courier zone assignments.'
+        },
+        metrics: {
+          id: [
+            'Mengelola data operasional harian ribuan paket masuk/keluar selama 18 bulan masa kerja.',
+            'Menyusun laporan terstruktur kategori status pengiriman (terkirim, tertunda, reschedule, batal, rusak) untuk evaluasi harian manajemen.',
+            'Meningkatkan kelancaran koordinasi kurir lapangan per zonasi wilayah dan penyelesaian konfirmasi pelanggan secara proaktif.'
+          ],
+          en: [
+            'Managed daily operational data for thousands of inbound/outbound parcels across an 18-month tenure.',
+            'Produced structured daily status reports (delivered, delayed, rescheduled, canceled, damaged) for management review.',
+            'Streamlined regional courier zone dispatching and proactive customer delivery issue resolution.'
+          ]
+        },
+        tags: ['Microsoft Excel', 'VLOOKUP & HLOOKUP', 'Pivot Table', 'Operational Dashboard', 'Stock Opname', 'Logistics Analytics'],
+        externalUrl: ''
+      }
+    ];
+
+    // Technical Skills Matrix Data
+    const skillsData = {
+      data: {
+        title: { id: 'Data Analysis & Operational Reporting', en: 'Data Analysis & Operational Reporting' },
+        desc: {
+          id: 'Pengolahan data terstruktur, rekonsiliasi inventaris, dan penyusunan dashboard evaluasi operasional untuk pengambilan keputusan cepat.',
+          en: 'Structured data processing, inventory reconciliation, and operational evaluation dashboards for rapid decision-making.'
+        },
+        items: [
+          { name: 'Microsoft Excel (VLOOKUP, HLOOKUP, Pivot Table)', level: 'Advanced // 18 Mos Production' },
+          { name: 'Operational Performance Dashboarding', level: 'Daily KPI & Courier Tracking' },
+          { name: 'Data Preprocessing & Cleaning', level: 'Tabular & Image Normalization' },
+          { name: 'Stock Opname & Inventory Reporting', level: 'Audit & Reconciliation' },
+          { name: 'Delivery Status & Route Zoning Analytics', level: 'High-Volume Logistics' }
+        ]
+      },
+      ml: {
+        title: { id: 'Machine Learning, Big Data & Computer Vision', en: 'Machine Learning, Big Data & Computer Vision' },
+        desc: {
+          id: 'Perancangan model klasifikasi dan teknik reduksi dimensi untuk efisiensi komputasi pada dataset berkapasitas besar.',
+          en: 'Designing classification models and dimensionality reduction pipelines for compute efficiency on large-scale datasets.'
+        },
+        items: [
+          { name: 'Principal Component Analysis (PCA)', level: 'Feature Extraction & Compression' },
+          { name: 'Incremental PCA (IPCA - Batch Processing)', level: 'Memory-Safe Big Data (>200 MB)' },
+          { name: 'Support Vector Machine (SVM)', level: 'Sinta 3 Published Research' },
+          { name: 'K-Nearest Neighbor (KNN)', level: 'Comparative Benchmarking' },
+          { name: 'Computer Vision & Image Classification', level: 'Pixel Feature Engineering' },
+          { name: 'RapidMiner', level: 'Certified ML Professional' }
+        ]
+      },
+      prog: {
+        title: { id: 'Programming, Libraries & Model Evaluation', en: 'Programming, Libraries & Model Evaluation' },
+        desc: {
+          id: 'Implementasi kode modular berbasis Python serta audit kuantitatif kualitas model klasifikasi dan rekonstruksi data.',
+          en: 'Modular Python implementation and quantitative auditing of classification performance and data reconstruction quality.'
+        },
+        items: [
+          { name: 'Python (Pandas & Scikit-Learn)', level: 'Data Manipulation & ML Pipelines' },
+          { name: 'Matplotlib & Seaborn', level: 'Statistical & Diagnostic Charts' },
+          { name: 'Streamlit Web Framework', level: 'Interactive ML & Data Apps' },
+          { name: 'Classification Report (Accuracy, F1-Score)', level: 'Precision-Recall Auditing' },
+          { name: 'MSE & PSNR Metrics', level: 'Reconstruction Quality Analysis' },
+          { name: 'T-SNE Dimensional Projection', level: 'High-Dimensional Cluster Visual' }
+        ]
+      },
+      tools: {
+        title: { id: 'Development Tools, Productivity & Communication', en: 'Development Tools, Productivity & Communication' },
+        desc: {
+          id: 'Perangkat pengembangan perangkat lunak, dokumentasi eksekutif, serta kemampuan komunikasi lintas tim.',
+          en: 'Software development environments, executive documentation, and cross-functional communication capabilities.'
+        },
+        items: [
+          { name: 'Visual Studio Code', level: 'Primary IDE & Debugging' },
+          { name: 'Microsoft Office (Word, PowerPoint, Excel)', level: 'Executive Reporting & Pitching' },
+          { name: 'Canva & CapCut', level: 'Visual Communication & Media' },
+          { name: 'Bahasa Indonesia', level: 'Aktif / Native Proficiency' },
+          { name: 'English (Bahasa Inggris)', level: 'TOEFL Certified (UTY 2026–2028)' }
+        ]
+      }
+    };
+
+    // =========================================================
+    // THEME & LANGUAGE TOGGLE LOGIC
+    // =========================================================
+    const themeToggleBtn = document.getElementById('themeToggle');
+    themeToggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    const langToggleBtn = document.getElementById('langToggle');
+    langToggleBtn.addEventListener('click', () => {
+      currentLang = currentLang === 'id' ? 'en' : 'id';
+      document.getElementById('langLabel').textContent = currentLang.toUpperCase();
+      document.documentElement.lang = currentLang;
+      applyTranslations();
+    });
+
+    function applyTranslations() {
+      const dict = i18nData[currentLang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+      // Re-render dynamic widgets in active language
+      selectSimMode(currentSimMode);
+      renderProjects();
+      selectSkillTab(currentSkillTab);
+      updateRecruiterPreview();
+    }
+
+    // =========================================================
+    // MOBILE MENU TOGGLE
+    // =========================================================
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIconOpen = document.getElementById('menuIconOpen');
+    const menuIconClose = document.getElementById('menuIconClose');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuIconOpen.classList.toggle('hidden', isHidden);
+      menuIconClose.classList.toggle('hidden', !isHidden);
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIconOpen.classList.remove('hidden');
+        menuIconClose.classList.add('hidden');
+      });
+    });
+
+    // =========================================================
+    // SIMULATOR BENCHMARK LOGIC (PCA VS IPCA)
+    // =========================================================
+    function selectSimMode(mode) {
+      currentSimMode = mode;
+      const data = simModesData[mode][currentLang];
+
+      // Update active card styles
+      document.querySelectorAll('.sim-mode-btn').forEach(btn => {
+        btn.classList.remove('border-teal-500', 'bg-teal-500/10', 'dark:bg-teal-500/10', 'shadow-md');
+        btn.classList.add('border-slate-200', 'dark:border-slate-800', 'bg-slate-50/70', 'dark:bg-slate-950/60');
+      });
+      const activeBtn = document.getElementById(`simBtn-${mode}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('border-slate-200', 'dark:border-slate-800', 'bg-slate-50/70', 'dark:bg-slate-950/60');
+        activeBtn.classList.add('border-teal-500', 'bg-teal-500/10', 'dark:bg-teal-500/10', 'shadow-md');
+      }
+
+      // Update readouts & animated progress bars
+      document.getElementById('simActiveHeading').textContent = data.heading;
+      const badgeEl = document.getElementById('simStatusBadge');
+      badgeEl.textContent = data.badge;
+      badgeEl.className = `px-3 py-1 rounded-full text-xs font-mono font-semibold border ${data.badgeClass}`;
+
+      document.getElementById('simValTime').textContent = data.timeVal;
+      const barTime = document.getElementById('simBarTime');
+      barTime.style.width = data.timePct;
+      barTime.className = `h-full rounded-full bg-gradient-to-r ${data.timeBarClass} transition-all duration-700 ease-out`;
+
+      document.getElementById('simValMem').textContent = data.memVal;
+      const barMem = document.getElementById('simBarMem');
+      barMem.style.width = data.memPct;
+      barMem.className = `h-full rounded-full bg-gradient-to-r ${data.memBarClass} transition-all duration-700 ease-out`;
+
+      document.getElementById('simValAcc').textContent = data.accVal;
+      document.getElementById('simBarAcc').style.width = data.accPct;
+
+      document.getElementById('simMiniFeat').textContent = data.feat;
+      document.getElementById('simMiniSpeed').textContent = data.speed;
+      document.getElementById('simMiniRam').textContent = data.ram;
+      document.getElementById('simNoteText').textContent = data.note;
+    }
+
+    // =========================================================
+    // PROJECTS RENDER, FILTER & CASE STUDY MODAL
+    // =========================================================
+    function filterProjects(category) {
+      currentProjectFilter = category;
+      renderProjects();
+    }
+
+    function renderProjects() {
+      // Update filter button styling
+      document.querySelectorAll('.proj-filter-btn').forEach(btn => {
+        const isActive = btn.getAttribute('data-filter') === currentProjectFilter;
+        if (isActive) {
+          btn.className = 'proj-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-teal-500 text-slate-950 shadow-md shadow-teal-500/20 transition-all';
+        } else {
+          btn.className = 'proj-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-teal-500/50 transition-all';
+        }
+      });
+
+      const grid = document.getElementById('projectsGrid');
+      const filtered = currentProjectFilter === 'all'
+        ? projectsData
+        : projectsData.filter(p => p.categories.includes(currentProjectFilter));
+
+      const ctaLabel = i18nData[currentLang].card_detail_cta;
+
+      grid.innerHTML = filtered.map(proj => `
+        <article onclick="openProjectModal('${proj.id}')" class="group cursor-pointer rounded-3xl bg-white/90 dark:bg-slate-900/85 border border-slate-200 dark:border-slate-800 hover:border-teal-500/70 p-6 sm:p-7 shadow-lg shadow-slate-950/5 hover:shadow-xl hover:shadow-teal-500/10 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-lg bg-teal-500/10 border border-teal-500/25 text-teal-600 dark:text-teal-400 font-mono text-xs font-semibold">
+                ${proj.badge[currentLang]}
+              </span>
+              <span class="font-mono text-xs text-slate-400">${proj.year}</span>
+            </div>
+
+            <div class="inline-block px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 font-mono text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-3">
+              ${proj.highlightMetric}
+            </div>
+
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors leading-snug">
+              ${proj.title[currentLang]}
+            </h3>
+
+            <p class="text-xs font-mono text-slate-500 dark:text-slate-400 mt-1.5">
+              ${proj.context[currentLang]}
+            </p>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+              ${proj.summary[currentLang]}
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-200/80 dark:border-slate-800 flex items-center justify-between gap-3">
+            <div class="flex flex-wrap gap-1.5">
+              ${proj.tags.slice(0, 4).map(tag => `
+                <span class="px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-mono text-[11px]">${tag}</span>
+              `).join('')}
+            </div>
+
+            <span class="inline-flex items-center gap-1 font-mono text-xs font-bold text-teal-600 dark:text-teal-400 shrink-0 group-hover:translate-x-1 transition-transform">
+              ${ctaLabel} &rarr;
+            </span>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function openProjectModal(projectId) {
+      const proj = projectsData.find(p => p.id === projectId);
+      if (!proj) return;
+
+      document.getElementById('modalCategory').textContent = `${proj.badge[currentLang]} • ${proj.year}`;
+      document.getElementById('modalTitle').textContent = proj.title[currentLang];
+      document.getElementById('modalContext').textContent = proj.context[currentLang];
+      document.getElementById('modalChallenge').textContent = proj.challenge[currentLang];
+      document.getElementById('modalSolution').textContent = proj.solution[currentLang];
+
+      const metricsList = document.getElementById('modalMetrics');
+      metricsList.innerHTML = proj.metrics[currentLang].map(m => `<li>${m}</li>`).join('');
+
+      const tagsWrap = document.getElementById('modalTags');
+      tagsWrap.innerHTML = proj.tags.map(t => `
+        <span class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-mono text-xs font-medium">${t}</span>
+      `).join('');
+
+      const extLink = document.getElementById('modalExternalLink');
+      if (proj.externalUrl) {
+        extLink.href = proj.externalUrl;
+        extLink.classList.remove('hidden');
+      } else {
+        extLink.classList.add('hidden');
+      }
+
+      const modal = document.getElementById('projectModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      const modal = document.getElementById('projectModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    // Close modal on backdrop click or Escape key
+    document.getElementById('projectModal').addEventListener('click', (e) => {
+      if (e.target.id === 'projectModal') closeProjectModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeProjectModal();
+    });
+
+    // =========================================================
+    // INTERACTIVE SKILL TABS
+    // =========================================================
+    function selectSkillTab(tabKey) {
+      currentSkillTab = tabKey;
+
+      document.querySelectorAll('.skill-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-teal-500', 'text-slate-950', 'border-teal-500', 'shadow-md');
+        btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-800');
+      });
+
+      const activeBtn = document.getElementById(`skillTab-${tabKey}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-800');
+        activeBtn.classList.add('bg-teal-500', 'text-slate-950', 'border-teal-500', 'shadow-md');
+      }
+
+      const group = skillsData[tabKey];
+      const panel = document.getElementById('skillPanel');
+
+      panel.innerHTML = `
+        <div class="mb-6 pb-5 border-b border-slate-200 dark:border-slate-800">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">${group.title[currentLang]}</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">${group.desc[currentLang]}</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          ${group.items.map(item => `
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/90 border border-slate-200/90 dark:border-slate-800 hover:border-teal-500/50 transition-colors">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span class="font-mono text-[11px] font-semibold text-teal-600 dark:text-teal-400">${item.level}</span>
+              </div>
+              <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">${item.name}</div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // =========================================================
+    // RECRUITER MESSAGE GENERATOR & CLIPBOARD TOAST
+    // =========================================================
+    function buildRecruiterMessage() {
+      const name = document.getElementById('recName').value.trim() || (currentLang === 'id' ? 'Tim Rekrutmen' : 'Recruitment Team');
+      const company = document.getElementById('recCompany').value.trim() || (currentLang === 'id' ? 'Perusahaan Kami' : 'Our Organization');
+      const role = document.getElementById('recRole').value;
+
+      if (currentLang === 'id') {
+        return `Halo Zahfar Aziz Ferdian, saya ${name} dari ${company}. Kami telah meninjau portofolio Anda dan tertarik untuk berdiskusi lebih lanjut mengenai peluang/posisi ${role}. Apakah Anda berkenan menjadwalkan sesi wawancara singkat? Terima kasih.`;
+      } else {
+        return `Hello Zahfar Aziz Ferdian, I am ${name} from ${company}. We reviewed your portfolio and would love to discuss an opportunity regarding ${role}. Would you be available for a brief introductory interview? Thank you.`;
+      }
+    }
+
+    function updateRecruiterPreview() {
+      document.getElementById('recMessagePreview').textContent = buildRecruiterMessage();
+    }
+
+    function sendViaEmail() {
+      const role = document.getElementById('recRole').value;
+      const company = document.getElementById('recCompany').value.trim();
+      const subject = encodeURIComponent(`Peluang Karir / Kolaborasi: ${role}${company ? ' - ' + company : ''}`);
+      const body = encodeURIComponent(buildRecruiterMessage());
+      window.location.href = `mailto:zahfaraf14@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    function sendViaWhatsApp() {
+      const text = encodeURIComponent(buildRecruiterMessage());
+      window.open(`https://wa.me/6289682726833?text=${text}`, '_blank', 'noopener,noreferrer');
+    }
+
+    function copyEmailAddress() {
+      const email = 'zahfaraf14@gmail.com';
+      const tempInput = document.createElement('textarea');
+      tempInput.value = email;
+      tempInput.setAttribute('readonly', '');
+      tempInput.style.position = 'absolute';
+      tempInput.style.left = '-9999px';
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        showToast(i18nData[currentLang].toast_copied);
+      } catch (err) {
+        showToast(email);
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    let toastTimer;
+    function showToast(message) {
+      const banner = document.getElementById('toastBanner');
+      document.getElementById('toastText').textContent = message;
+      banner.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        banner.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      }, 3200);
+    }
+
+    // =========================================================
+    // SCROLL REVEAL OBSERVER & INITIALIZATION
+    // =========================================================
+    window.addEventListener('DOMContentLoaded', () => {
+      // Initialize all interactive sections
+      selectSimMode('ipca');
+      renderProjects();
+      selectSkillTab('data');
+      updateRecruiterPreview();
+
+      // IntersectionObserver for smooth scroll reveal
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal-section').forEach(sec => observer.observe(sec));
+    });
+  </script>
+</body>
+</html>
